@@ -7,17 +7,30 @@
 
 import UIKit
 
+protocol RoutineCellDelegate: AnyObject {
+    func didPressButton(_ tag: Int)
+}
+
 class RoutineTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var routineCell: UIView!
+    @IBOutlet weak var routineLabel: UIButton!
+    
+    weak var delegate: RoutineCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    override func layoutSubviews() {
+        super.layoutSubviews()
 
-        // Configure the view for the selected state
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+    }
+    
+    @IBAction func routineButton(_ sender: UIButton) {
+        delegate?.didPressButton(sender.tag)
     }
     
 }

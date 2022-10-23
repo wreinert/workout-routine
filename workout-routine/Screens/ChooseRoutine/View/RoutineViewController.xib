@@ -9,8 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="workout_routine" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RoutineViewController" customModule="workout_routine" customModuleProvider="target">
             <connections>
+                <outlet property="pullDownButton" destination="BoW-cw-I8M" id="sbx-1a-2Lk"/>
+                <outlet property="tableView" destination="lje-2m-SLm" id="vo6-p9-vuc"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,18 +24,16 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZR-nf-XrV" userLabel="Content View">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4CR-YM-N1n">
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4CR-YM-N1n">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qIe-rL-B9U" userLabel="Top Stack View">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qIe-rL-B9U" userLabel="Top Stack View">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="743"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoW-cw-I8M">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="5kj-Ug-C5D"/>
-                                            </constraints>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoW-cw-I8M">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="743"/>
                                             <menu key="menu" id="Ktx-SX-RkQ">
+                                                <menuOptions key="menuOptions" singleSelection="YES"/>
                                                 <children>
                                                     <command title="Item 1" id="lxn-DJ-1uz"/>
                                                     <command title="Item 2" id="AQX-9H-9cd"/>
@@ -43,11 +43,11 @@
                                         </button>
                                     </subviews>
                                 </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-bS-gyq" userLabel="Main Stack View">
-                                    <rect key="frame" x="0.0" y="55" width="414" height="763"/>
+                                <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bx4-bS-gyq" userLabel="Main Stack View">
+                                    <rect key="frame" x="0.0" y="748" width="414" height="70"/>
                                     <subviews>
-                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lje-2m-SLm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="763"/>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lje-2m-SLm">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </tableView>
                                     </subviews>

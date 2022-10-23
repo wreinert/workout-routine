@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol RoutinePresenterProtocol {
+    
+}
+
+class RoutinePresenter: RoutinePresenterProtocol {
+    
+}

@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+public protocol Coordinator {
+    var currentViewController: UIViewController? { get }
+    var navigationViewController: UINavigationController? { get }
+    
+    func start()
+}

@@ -8,18 +8,25 @@
 import Foundation
 import UIKit
 
-public final class RoutineCoordinator: Coordinator {
-    public var currentViewController: UIViewController?
-    public var navigationViewController: UINavigationController?
+final class RoutineCoordinator: Coordinator {
+    var currentViewController: UIViewController?
+    var navigationViewController: UINavigationController?
     
-    public init(navigationController: UINavigationController?) {
+    init(navigationController: UINavigationController?) {
         self.navigationViewController = navigationController
     }
     
-    public func start() {
+    func start() {
         let viewController = RoutineViewController()
+        viewController.coordinator = self
         navigationViewController?.pushViewController(viewController, animated: true)
     }
     
-    
+    func showSetsScreen() {
+        let viewController = SetsViewController()
+        
+        DispatchQueue.main.async {
+            self.navigationViewController?.pushViewController(viewController, animated: true)
+        }
+    }
 }
