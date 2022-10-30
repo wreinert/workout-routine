@@ -17,13 +17,16 @@ final class RoutineCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = RoutineViewController()
+        let service = RoutineService()
+        let presenter = RoutinePresenter(service: service)
+        let viewController = RoutineViewController(presenter: presenter)
         viewController.coordinator = self
+//        presenter.coordinator = self
         navigationViewController?.pushViewController(viewController, animated: true)
     }
     
-    func showSetsScreen() {
-        let viewController = SetsViewController()
+    func showSetsScreen(exercise: String) {
+        let viewController = SetsViewController(exercise: exercise)
         
         DispatchQueue.main.async {
             self.navigationViewController?.pushViewController(viewController, animated: true)

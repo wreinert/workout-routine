@@ -7,10 +7,19 @@
 
 import Foundation
 
+protocol RoutinePresenterCoordinator {
+    func showSetsScreen()
+}
+
 protocol RoutinePresenterProtocol {
     
 }
 
 class RoutinePresenter: RoutinePresenterProtocol {
+    var coordinator: RoutinePresenterCoordinator?
+    let service: RoutineServiceProtocol
     
+    init(service: RoutineServiceProtocol) {
+        self.service = service
+    }
 }

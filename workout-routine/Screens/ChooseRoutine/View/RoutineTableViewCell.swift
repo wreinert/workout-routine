@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RoutineCellDelegate: AnyObject {
-    func didPressButton(_ tag: Int)
+    func didPressButton(_ tag: Int, _ exercise: String?)
 }
 
 class RoutineTableViewCell: UITableViewCell {
@@ -30,7 +30,6 @@ class RoutineTableViewCell: UITableViewCell {
     }
     
     @IBAction func routineButton(_ sender: UIButton) {
-        delegate?.didPressButton(sender.tag)
+        delegate?.didPressButton(sender.tag, sender.currentTitle)
     }
-    
 }

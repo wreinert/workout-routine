@@ -18,11 +18,21 @@
 		B10AF40F29059BA800CB7D04 /* RoutinePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AF40E29059BA800CB7D04 /* RoutinePresenter.swift */; };
 		B10AF41229059F4800CB7D04 /* RoutineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AF41029059F4800CB7D04 /* RoutineTableViewCell.swift */; };
 		B10AF41329059F4800CB7D04 /* RoutineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B10AF41129059F4800CB7D04 /* RoutineTableViewCell.xib */; };
+		B10AF4162905C50A00CB7D04 /* SetsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10AF4142905C50A00CB7D04 /* SetsTableViewCell.swift */; };
+		B10AF4172905C50A00CB7D04 /* SetsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B10AF4152905C50A00CB7D04 /* SetsTableViewCell.xib */; };
 		B17749142904540900A7CB3B /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17749132904540900A7CB3B /* AppCoordinator.swift */; };
 		B17749172904544B00A7CB3B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B17749162904544B00A7CB3B /* Coordinator.swift */; };
 		B1774919290454E000A7CB3B /* RoutineCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1774918290454E000A7CB3B /* RoutineCoordinator.swift */; };
 		B177491E290455EE00A7CB3B /* RoutineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B177491C290455EE00A7CB3B /* RoutineViewController.swift */; };
 		B177491F290455EE00A7CB3B /* RoutineViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B177491D290455EE00A7CB3B /* RoutineViewController.xib */; };
+		B19F391D290DE9EB00D03ECB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F391C290DE9EB00D03ECB /* Constants.swift */; };
+		B19F3920290E03FE00D03ECB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F391E290E03FE00D03ECB /* MenuViewController.swift */; };
+		B19F3921290E03FE00D03ECB /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19F391F290E03FE00D03ECB /* MenuViewController.xib */; };
+		B1EE6D19290B429400B7611B /* SetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE6D18290B429400B7611B /* SetsModel.swift */; };
+		B1EE6D1B290B53A700B7611B /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE6D1A290B53A700B7611B /* RoutineService.swift */; };
+		B1EE6D1E290B547200B7611B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B1EE6D1D290B547200B7611B /* Realm */; };
+		B1EE6D20290B547200B7611B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B1EE6D1F290B547200B7611B /* RealmSwift */; };
+		B1EE6D22290C93CE00B7611B /* TEBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE6D21290C93CE00B7611B /* TEBaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +49,19 @@
 		B10AF40E29059BA800CB7D04 /* RoutinePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinePresenter.swift; sourceTree = "<group>"; };
 		B10AF41029059F4800CB7D04 /* RoutineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineTableViewCell.swift; sourceTree = "<group>"; };
 		B10AF41129059F4800CB7D04 /* RoutineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutineTableViewCell.xib; sourceTree = "<group>"; };
+		B10AF4142905C50A00CB7D04 /* SetsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsTableViewCell.swift; sourceTree = "<group>"; };
+		B10AF4152905C50A00CB7D04 /* SetsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SetsTableViewCell.xib; sourceTree = "<group>"; };
 		B17749132904540900A7CB3B /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B17749162904544B00A7CB3B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B1774918290454E000A7CB3B /* RoutineCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineCoordinator.swift; sourceTree = "<group>"; };
 		B177491C290455EE00A7CB3B /* RoutineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewController.swift; sourceTree = "<group>"; };
 		B177491D290455EE00A7CB3B /* RoutineViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoutineViewController.xib; sourceTree = "<group>"; };
+		B19F391C290DE9EB00D03ECB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B19F391E290E03FE00D03ECB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B19F391F290E03FE00D03ECB /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		B1EE6D18290B429400B7611B /* SetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsModel.swift; sourceTree = "<group>"; };
+		B1EE6D1A290B53A700B7611B /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
+		B1EE6D21290C93CE00B7611B /* TEBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1EE6D20290B547200B7611B /* RealmSwift in Frameworks */,
+				B1EE6D1E290B547200B7611B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +96,7 @@
 		B100352A290448F000AD19AA /* workout-routine */ = {
 			isa = PBXGroup;
 			children = (
+				B19F391B290DE9D800D03ECB /* Utils */,
 				B17749152904543900A7CB3B /* Protocols */,
 				B1774912290453F400A7CB3B /* Coordinator */,
 				B100352B290448F000AD19AA /* AppDelegate.swift */,
@@ -100,6 +121,7 @@
 		B100354129044B5700AD19AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B1EE6D18290B429400B7611B /* SetsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,13 +129,18 @@
 		B100354229044B6000AD19AA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B19F391E290E03FE00D03ECB /* MenuViewController.swift */,
+				B19F391F290E03FE00D03ECB /* MenuViewController.xib */,
 				B177491C290455EE00A7CB3B /* RoutineViewController.swift */,
 				B177491D290455EE00A7CB3B /* RoutineViewController.xib */,
-				B1020A5029045B9200CF473D /* ExampleViewController.swift */,
 				B10AF40A290599DC00CB7D04 /* SetsViewController.swift */,
 				B10AF40B290599DC00CB7D04 /* SetsViewController.xib */,
 				B10AF41029059F4800CB7D04 /* RoutineTableViewCell.swift */,
 				B10AF41129059F4800CB7D04 /* RoutineTableViewCell.xib */,
+				B10AF4142905C50A00CB7D04 /* SetsTableViewCell.swift */,
+				B10AF4152905C50A00CB7D04 /* SetsTableViewCell.xib */,
+				B1020A5029045B9200CF473D /* ExampleViewController.swift */,
+				B1EE6D21290C93CE00B7611B /* TEBaseViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -129,6 +156,7 @@
 		B100354429044B6D00AD19AA /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B1EE6D1A290B53A700B7611B /* RoutineService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -137,10 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				B1774918290454E000A7CB3B /* RoutineCoordinator.swift */,
-				B100354429044B6D00AD19AA /* Service */,
-				B100354329044B6700AD19AA /* Presenter */,
-				B100354229044B6000AD19AA /* View */,
 				B100354129044B5700AD19AA /* Model */,
+				B100354229044B6000AD19AA /* View */,
+				B100354329044B6700AD19AA /* Presenter */,
+				B100354429044B6D00AD19AA /* Service */,
 			);
 			path = ChooseRoutine;
 			sourceTree = "<group>";
@@ -161,6 +189,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		B19F391B290DE9D800D03ECB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B19F391C290DE9EB00D03ECB /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +213,10 @@
 			dependencies = (
 			);
 			name = "workout-routine";
+			packageProductDependencies = (
+				B1EE6D1D290B547200B7611B /* Realm */,
+				B1EE6D1F290B547200B7611B /* RealmSwift */,
+			);
 			productName = "workout-routine";
 			productReference = B1003528290448F000AD19AA /* workout-routine.app */;
 			productType = "com.apple.product-type.application";
@@ -205,6 +245,9 @@
 				Base,
 			);
 			mainGroup = B100351F290448F000AD19AA;
+			packageReferences = (
+				B1EE6D1C290B547200B7611B /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = B1003529290448F000AD19AA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -221,8 +264,10 @@
 			files = (
 				B1003538290448F800AD19AA /* LaunchScreen.storyboard in Resources */,
 				B10AF41329059F4800CB7D04 /* RoutineTableViewCell.xib in Resources */,
+				B10AF4172905C50A00CB7D04 /* SetsTableViewCell.xib in Resources */,
 				B10AF40D290599DC00CB7D04 /* SetsViewController.xib in Resources */,
 				B177491F290455EE00A7CB3B /* RoutineViewController.xib in Resources */,
+				B19F3921290E03FE00D03ECB /* MenuViewController.xib in Resources */,
 				B1003535290448F800AD19AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,17 +279,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B10AF4162905C50A00CB7D04 /* SetsTableViewCell.swift in Sources */,
 				B10AF41229059F4800CB7D04 /* RoutineTableViewCell.swift in Sources */,
 				B17749142904540900A7CB3B /* AppCoordinator.swift in Sources */,
 				B1020A5129045B9200CF473D /* ExampleViewController.swift in Sources */,
 				B1774919290454E000A7CB3B /* RoutineCoordinator.swift in Sources */,
 				B1003530290448F000AD19AA /* ViewController.swift in Sources */,
 				B10AF40C290599DC00CB7D04 /* SetsViewController.swift in Sources */,
+				B19F391D290DE9EB00D03ECB /* Constants.swift in Sources */,
 				B10AF40F29059BA800CB7D04 /* RoutinePresenter.swift in Sources */,
 				B17749172904544B00A7CB3B /* Coordinator.swift in Sources */,
 				B177491E290455EE00A7CB3B /* RoutineViewController.swift in Sources */,
+				B19F3920290E03FE00D03ECB /* MenuViewController.swift in Sources */,
+				B1EE6D1B290B53A700B7611B /* RoutineService.swift in Sources */,
 				B100352C290448F000AD19AA /* AppDelegate.swift in Sources */,
+				B1EE6D19290B429400B7611B /* SetsModel.swift in Sources */,
 				B100352E290448F000AD19AA /* SceneDelegate.swift in Sources */,
+				B1EE6D22290C93CE00B7611B /* TEBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +503,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B1EE6D1C290B547200B7611B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B1EE6D1D290B547200B7611B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1EE6D1C290B547200B7611B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		B1EE6D1F290B547200B7611B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B1EE6D1C290B547200B7611B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B1003520290448F000AD19AA /* Project object */;
 }
