@@ -16,7 +16,8 @@ class SetsViewController: TEBaseViewController {
     
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
-        
+    @IBOutlet weak var repsLabel: UILabel!
+    
     init(exercise: String) {
         self.exercise = exercise
         super.init()
@@ -35,5 +36,11 @@ class SetsViewController: TEBaseViewController {
         sender.minimumValue = 0
         sender.maximumValue = 400
         weightLabel.text = "\(String(Int(sender.value))) kg"
+    }
+    
+    @IBAction func repsStepper(_ sender: UIStepper) {
+        sender.minimumValue = 0
+        sender.maximumValue = 30
+        repsLabel.text = "\(String(Int(sender.value)))"
     }
 }

@@ -7,23 +7,28 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class MenuViewController: TEBaseViewController {
 
+    var coordinator: RoutineCoordinator?
+    
+    override init() {
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func goToWorkoutButtonPressed(_ sender: UIButton) {
+        coordinator?.showWorkoutsScreen()
     }
-    */
-
+    
+    @IBAction func addWorkoutButtonPressed(_ sender: UIButton) {
+        coordinator?.showAddWorkoutScreen()
+    }
 }

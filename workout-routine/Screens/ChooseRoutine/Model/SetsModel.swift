@@ -7,12 +7,16 @@
 
 import Foundation
 
-class MobileBrand {
-   var brandName: String?
-   var modelName: [String]?
-     
-   init(brandName: String, modelName: [String]) {
-       self.brandName = brandName
-       self.modelName = modelName
-   }
+class Exercise: Decodable {
+    var setName: String?
+    var exerciseName: [String]?
+    
+    init(exerciseName: [String]) {
+        self.exerciseName = exerciseName
+    }
+    
+    init(setName: String, exerciseName: [String]) {
+        self.setName = setName
+        self.exerciseName = exerciseName
+    }
 }

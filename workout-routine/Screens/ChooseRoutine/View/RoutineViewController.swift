@@ -9,7 +9,7 @@ import UIKit
 
 class RoutineViewController: TEBaseViewController {
     
-    var mobileBrand = [MobileBrand]()
+    var exercises = [Exercise]()
     let sets: [String] = ["Arms", "Chest", "Back", "Abs", "Legs"]
     let cellReuseIdentifier = "cell"
     let routineCell = RoutineTableViewCell()
@@ -31,11 +31,11 @@ class RoutineViewController: TEBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        mobileBrand.append(MobileBrand.init(brandName: "Arms", modelName: ["iPhone 5s","iPhone 6","iPhone 6s", "iPhone 7+", "iPhone 8", "iPhone 8+", "iPhone 11", "iPhone 11 Pro"]))
-        mobileBrand.append(MobileBrand.init(brandName: "Chest", modelName: ["Samsung M Series", "Samsung Galaxy Note 9", "Samsung Galaxy Note 9+", "Samsung Galaxy Note 10", "Samsung Galaxy Note 10 +"]))
-        mobileBrand.append(MobileBrand.init(brandName: "Back", modelName: ["Mi Note 7", "Mi Note 7 Pro", "Mi K20"]))
-        mobileBrand.append(MobileBrand.init(brandName: "Abs", modelName: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
-        mobileBrand.append(MobileBrand.init(brandName: "Legs", modelName: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
+        exercises.append(Exercise.init(setName: "Arms", exerciseName: ["Bicep Curl","Tricep Dip","Hammer Curl", "Overhead Tricep Extension"]))
+        exercises.append(Exercise.init(setName: "Chest", exerciseName: ["Samsung M Series", "Samsung Galaxy Note 9", "Samsung Galaxy Note 9+", "Samsung Galaxy Note 10", "Samsung Galaxy Note 10 +"]))
+        exercises.append(Exercise.init(setName: "Back", exerciseName: ["Mi Note 7", "Mi Note 7 Pro", "Mi K20"]))
+        exercises.append(Exercise.init(setName: "Abs", exerciseName: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
+        exercises.append(Exercise.init(setName: "Legs", exerciseName: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
         
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "RoutineTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
@@ -69,12 +69,12 @@ class RoutineViewController: TEBaseViewController {
 
 extension RoutineViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mobileBrand[section].modelName?.count ?? 0
+        return exercises[section].exerciseName?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! RoutineTableViewCell
-        cell.routineLabel.setTitle(mobileBrand[indexPath.section].modelName?[indexPath.row], for: .normal)
+        cell.routineLabel.setTitle(exercises[indexPath.section].exerciseName?[indexPath.row], for: .normal)
         cell.delegate = self
         cell.routineLabel.tag = indexPath.row
         
@@ -82,11 +82,11 @@ extension RoutineViewController: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return mobileBrand.count
+        return exercises.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return mobileBrand[section].brandName
+        return exercises[section].setName
     }
 }
 

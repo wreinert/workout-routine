@@ -28,6 +28,10 @@
 		B19F391D290DE9EB00D03ECB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F391C290DE9EB00D03ECB /* Constants.swift */; };
 		B19F3920290E03FE00D03ECB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F391E290E03FE00D03ECB /* MenuViewController.swift */; };
 		B19F3921290E03FE00D03ECB /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19F391F290E03FE00D03ECB /* MenuViewController.xib */; };
+		B19F3924290F2CEB00D03ECB /* AddWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F3922290F2CEB00D03ECB /* AddWorkoutViewController.swift */; };
+		B19F3927290F2E5B00D03ECB /* AddWorkoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19F3926290F2E5B00D03ECB /* AddWorkoutViewController.xib */; };
+		B19F392A2913519700D03ECB /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19F39282913519600D03ECB /* SearchViewController.swift */; };
+		B19F392B2913519700D03ECB /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B19F39292913519600D03ECB /* SearchViewController.xib */; };
 		B1EE6D19290B429400B7611B /* SetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE6D18290B429400B7611B /* SetsModel.swift */; };
 		B1EE6D1B290B53A700B7611B /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE6D1A290B53A700B7611B /* RoutineService.swift */; };
 		B1EE6D1E290B547200B7611B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B1EE6D1D290B547200B7611B /* Realm */; };
@@ -59,6 +63,10 @@
 		B19F391C290DE9EB00D03ECB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B19F391E290E03FE00D03ECB /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B19F391F290E03FE00D03ECB /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		B19F3922290F2CEB00D03ECB /* AddWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutViewController.swift; sourceTree = "<group>"; };
+		B19F3926290F2E5B00D03ECB /* AddWorkoutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddWorkoutViewController.xib; sourceTree = "<group>"; };
+		B19F39282913519600D03ECB /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		B19F39292913519600D03ECB /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		B1EE6D18290B429400B7611B /* SetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsModel.swift; sourceTree = "<group>"; };
 		B1EE6D1A290B53A700B7611B /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
 		B1EE6D21290C93CE00B7611B /* TEBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEBaseViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +143,10 @@
 				B177491D290455EE00A7CB3B /* RoutineViewController.xib */,
 				B10AF40A290599DC00CB7D04 /* SetsViewController.swift */,
 				B10AF40B290599DC00CB7D04 /* SetsViewController.xib */,
+				B19F3922290F2CEB00D03ECB /* AddWorkoutViewController.swift */,
+				B19F3926290F2E5B00D03ECB /* AddWorkoutViewController.xib */,
+				B19F39282913519600D03ECB /* SearchViewController.swift */,
+				B19F39292913519600D03ECB /* SearchViewController.xib */,
 				B10AF41029059F4800CB7D04 /* RoutineTableViewCell.swift */,
 				B10AF41129059F4800CB7D04 /* RoutineTableViewCell.xib */,
 				B10AF4142905C50A00CB7D04 /* SetsTableViewCell.swift */,
@@ -262,10 +274,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B19F3927290F2E5B00D03ECB /* AddWorkoutViewController.xib in Resources */,
 				B1003538290448F800AD19AA /* LaunchScreen.storyboard in Resources */,
 				B10AF41329059F4800CB7D04 /* RoutineTableViewCell.xib in Resources */,
 				B10AF4172905C50A00CB7D04 /* SetsTableViewCell.xib in Resources */,
 				B10AF40D290599DC00CB7D04 /* SetsViewController.xib in Resources */,
+				B19F392B2913519700D03ECB /* SearchViewController.xib in Resources */,
 				B177491F290455EE00A7CB3B /* RoutineViewController.xib in Resources */,
 				B19F3921290E03FE00D03ECB /* MenuViewController.xib in Resources */,
 				B1003535290448F800AD19AA /* Assets.xcassets in Resources */,
@@ -281,7 +295,9 @@
 			files = (
 				B10AF4162905C50A00CB7D04 /* SetsTableViewCell.swift in Sources */,
 				B10AF41229059F4800CB7D04 /* RoutineTableViewCell.swift in Sources */,
+				B19F3924290F2CEB00D03ECB /* AddWorkoutViewController.swift in Sources */,
 				B17749142904540900A7CB3B /* AppCoordinator.swift in Sources */,
+				B19F392A2913519700D03ECB /* SearchViewController.swift in Sources */,
 				B1020A5129045B9200CF473D /* ExampleViewController.swift in Sources */,
 				B1774919290454E000A7CB3B /* RoutineCoordinator.swift in Sources */,
 				B1003530290448F000AD19AA /* ViewController.swift in Sources */,
