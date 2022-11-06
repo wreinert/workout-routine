@@ -30,12 +30,14 @@ class RoutineViewController: TEBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        exercises.append(Exercise.init(setName: "Arms", exerciseName: ["Bicep Curl","Tricep Dip","Hammer Curl", "Overhead Tricep Extension"]))
-        exercises.append(Exercise.init(setName: "Chest", exerciseName: ["Samsung M Series", "Samsung Galaxy Note 9", "Samsung Galaxy Note 9+", "Samsung Galaxy Note 10", "Samsung Galaxy Note 10 +"]))
-        exercises.append(Exercise.init(setName: "Back", exerciseName: ["Mi Note 7", "Mi Note 7 Pro", "Mi K20"]))
-        exercises.append(Exercise.init(setName: "Abs", exerciseName: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
-        exercises.append(Exercise.init(setName: "Legs", exerciseName: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
+        
+        exercises.append(Exercise.init(bodyPart: "Arms", name: ["Bicep Curl","Tricep Dip","Hammer Curl", "Overhead Tricep Extension"]))
+        exercises.append(Exercise.init(bodyPart: "Chest", name: ["Samsung M Series", "Samsung Galaxy Note 9", "Samsung Galaxy Note 9+", "Samsung Galaxy Note 10", "Samsung Galaxy Note 10 +"]))
+        exercises.append(Exercise.init(bodyPart: "Back", name: ["Mi Note 7", "Mi Note 7 Pro", "Mi K20"]))
+        exercises.append(Exercise.init(bodyPart: "Abs", name: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
+        exercises.append(Exercise.init(bodyPart: "Legs", name: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
+        
+//        RealmService().addWorkout(exercise: exercises[0])
         
         self.tableView.dataSource = self
         self.tableView.register(UINib(nibName: "RoutineTableViewCell", bundle: nil), forCellReuseIdentifier: cellReuseIdentifier)
@@ -69,12 +71,12 @@ class RoutineViewController: TEBaseViewController {
 
 extension RoutineViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exercises[section].exerciseName?.count ?? 0
+        return exercises[section].name?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! RoutineTableViewCell
-        cell.routineLabel.setTitle(exercises[indexPath.section].exerciseName?[indexPath.row], for: .normal)
+        cell.routineLabel.setTitle(exercises[indexPath.section].name?[indexPath.row], for: .normal)
         cell.delegate = self
         cell.routineLabel.tag = indexPath.row
         
@@ -86,7 +88,7 @@ extension RoutineViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return exercises[section].setName
+        return exercises[section].bodyPart
     }
 }
 

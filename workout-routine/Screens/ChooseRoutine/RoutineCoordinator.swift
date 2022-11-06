@@ -24,7 +24,7 @@ final class RoutineCoordinator: Coordinator {
     }
     
     func showWorkoutsScreen() {
-        let service = RoutineService()
+        let service = RealmService()
         let presenter = RoutinePresenter(service: service)
         let viewController = RoutineViewController(presenter: presenter)
         viewController.coordinator = self
@@ -33,7 +33,21 @@ final class RoutineCoordinator: Coordinator {
     }
     
     func showAddWorkoutScreen() {
-        let viewController = AddWorkoutViewController()
+        let service = RealmService()
+        let presenter = AddWorkoutPresenter(service: service)
+        let viewController = AddWorkoutViewController(presenter: presenter)
+        viewController.coordinator = self
+        
+        DispatchQueue.main.async {
+            self.navigationViewController?.pushViewController(viewController, animated: true)
+        }
+    }
+    
+    func showSearchScreen() {
+        let presenter = SearchPresenter()
+        let viewController = SearchViewController(presenter: presenter)
+        
+        presenter.searchController = viewController.searchController
         
         DispatchQueue.main.async {
             self.navigationViewController?.pushViewController(viewController, animated: true)

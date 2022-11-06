@@ -1,5 +1,5 @@
 //
-//  RoutineService.swift
+//  RealmService.swift
 //  workout-routine
 //
 //  Created by William Reinert on 27/10/22.
@@ -10,13 +10,29 @@ import RealmSwift
 
 let app = App(id: Constants.appID)
 
-protocol RoutineServiceProtocol {
+protocol RealmServiceProtocol {
     func login()
+//    func addWorkout(exercise: Exercise)
 }
 
-class RoutineService: RoutineServiceProtocol {
-   
+class RealmService: RealmServiceProtocol {
+    
+    
+    
+    func setupRealm() {
+        let configuration = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        let realm = try! Realm(configuration: configuration)
+//        print(Realm.Configuration.defaultConfiguration.fileURL)
+    }
+    
+//    func addWorkout(exercise: Exercise) {
+//        try! realm.write({
+//            realm.add(exercise)
+//        })
+//    }
+    
     func login() {
+        setupRealm()
         let anonymousCredentials = Credentials.anonymous
         app.login(credentials: anonymousCredentials) { (result) in
             switch result {

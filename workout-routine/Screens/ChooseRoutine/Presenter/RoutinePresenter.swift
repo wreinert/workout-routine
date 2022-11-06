@@ -17,9 +17,9 @@ protocol RoutinePresenterProtocol {
 
 class RoutinePresenter: RoutinePresenterProtocol {
     var coordinator: RoutinePresenterCoordinator?
-    let service: RoutineServiceProtocol
+    let service: RealmServiceProtocol
     
-    init(service: RoutineServiceProtocol) {
+    init(service: RealmServiceProtocol) {
         self.service = service
     }
 }

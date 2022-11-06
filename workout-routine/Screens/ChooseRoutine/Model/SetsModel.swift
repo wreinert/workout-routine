@@ -6,17 +6,29 @@
 //
 
 import Foundation
+import RealmSwift
 
-class Exercise: Decodable {
-    var setName: String?
-    var exerciseName: [String]?
+class Exercise: Object {
     
-    init(exerciseName: [String]) {
-        self.exerciseName = exerciseName
+    var exercises = List<String?>()
+    @Persisted var bodyPart: String?
+    @Persisted var exerciseList: List<String?>
+    var name: [String]?
+    var target: String?
+     
+    override init() {
+        super.init()
     }
     
-    init(setName: String, exerciseName: [String]) {
-        self.setName = setName
-        self.exerciseName = exerciseName
+    init(name: [String]) {
+        self.name = name
+        self.exercises.append(objectsIn: name)
+    }
+    
+    init(bodyPart: String, name: [String]) {
+        self.bodyPart = bodyPart
+        self.name = name
+        super.init()
+        self.exerciseList.append(objectsIn: name)
     }
 }
