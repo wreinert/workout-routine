@@ -12,7 +12,7 @@ let app = App(id: Constants.appID)
 
 protocol RealmServiceProtocol {
     func login()
-//    func addWorkout(exercise: Exercise)
+//    func addWorkout(exercise: Workout)
 }
 
 class RealmService: RealmServiceProtocol {
@@ -22,10 +22,10 @@ class RealmService: RealmServiceProtocol {
     func setupRealm() {
         let configuration = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         let realm = try! Realm(configuration: configuration)
-//        print(Realm.Configuration.defaultConfiguration.fileURL)
+        print(Realm.Configuration.defaultConfiguration.fileURL)
     }
     
-//    func addWorkout(exercise: Exercise) {
+//    func addWorkout(exercise: Workout) {
 //        try! realm.write({
 //            realm.add(exercise)
 //        })

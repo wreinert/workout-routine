@@ -62,7 +62,7 @@ extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableCell", for: indexPath) as UITableViewCell
 
-        cell.textLabel?.text = presenter.searchStatus(index: indexPath.row)
+        cell.textLabel?.text = presenter.searchStatus(index: indexPath.row).capitalized
         
         return cell
     }

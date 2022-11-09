@@ -9,7 +9,7 @@ import UIKit
 
 class RoutineViewController: TEBaseViewController {
     
-    var exercises = [Exercise]()
+    var exercises = [Workout]()
     let sets: [String] = ["Arms", "Chest", "Back", "Abs", "Legs"]
     let cellReuseIdentifier = "cell"
     let routineCell = RoutineTableViewCell()
@@ -31,11 +31,11 @@ class RoutineViewController: TEBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        exercises.append(Exercise.init(bodyPart: "Arms", name: ["Bicep Curl","Tricep Dip","Hammer Curl", "Overhead Tricep Extension"]))
-        exercises.append(Exercise.init(bodyPart: "Chest", name: ["Samsung M Series", "Samsung Galaxy Note 9", "Samsung Galaxy Note 9+", "Samsung Galaxy Note 10", "Samsung Galaxy Note 10 +"]))
-        exercises.append(Exercise.init(bodyPart: "Back", name: ["Mi Note 7", "Mi Note 7 Pro", "Mi K20"]))
-        exercises.append(Exercise.init(bodyPart: "Abs", name: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
-        exercises.append(Exercise.init(bodyPart: "Legs", name: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
+        exercises.append(Workout.init(bodyPart: "Arms", name: ["Bicep Curl","Tricep Dip","Hammer Curl", "Overhead Tricep Extension"]))
+        exercises.append(Workout.init(bodyPart: "Chest", name: ["Samsung M Series", "Samsung Galaxy Note 9", "Samsung Galaxy Note 9+", "Samsung Galaxy Note 10", "Samsung Galaxy Note 10 +"]))
+        exercises.append(Workout.init(bodyPart: "Back", name: ["Mi Note 7", "Mi Note 7 Pro", "Mi K20"]))
+        exercises.append(Workout.init(bodyPart: "Abs", name: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
+        exercises.append(Workout.init(bodyPart: "Legs", name: ["Huawei Mate 20", "Huawei P30 Pro", "Huawei P10 Plus", "Huawei P20"]))
         
 //        RealmService().addWorkout(exercise: exercises[0])
         

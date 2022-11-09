@@ -37,7 +37,9 @@
 		B1CC2E2929181D6300AA6D42 /* RealmSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2E2829181D6300AA6D42 /* RealmSample.swift */; };
 		B1CC2E2C29185FE100AA6D42 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B1CC2E2B29185FE100AA6D42 /* Alamofire */; };
 		B1CC2E2E291860B800AA6D42 /* ExerciseDBService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1CC2E2D291860B800AA6D42 /* ExerciseDBService.swift */; };
-		B1EE6D19290B429400B7611B /* SetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE6D18290B429400B7611B /* SetsModel.swift */; };
+		B1E308E2291B0A590073CC02 /* exerciseDB.json in Resources */ = {isa = PBXBuildFile; fileRef = B1E308E1291B0A580073CC02 /* exerciseDB.json */; };
+		B1E308E4291B260F0073CC02 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E308E3291B260F0073CC02 /* Exercise.swift */; };
+		B1EE6D19290B429400B7611B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE6D18290B429400B7611B /* Workout.swift */; };
 		B1EE6D1B290B53A700B7611B /* RoutineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1EE6D1A290B53A700B7611B /* RoutineService.swift */; };
 		B1EE6D1E290B547200B7611B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = B1EE6D1D290B547200B7611B /* Realm */; };
 		B1EE6D20290B547200B7611B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B1EE6D1F290B547200B7611B /* RealmSwift */; };
@@ -76,7 +78,9 @@
 		B1CC2DFD29149D8000AA6D42 /* AddWorkoutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutPresenter.swift; sourceTree = "<group>"; };
 		B1CC2E2829181D6300AA6D42 /* RealmSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSample.swift; sourceTree = "<group>"; };
 		B1CC2E2D291860B800AA6D42 /* ExerciseDBService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDBService.swift; sourceTree = "<group>"; };
-		B1EE6D18290B429400B7611B /* SetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetsModel.swift; sourceTree = "<group>"; };
+		B1E308E1291B0A580073CC02 /* exerciseDB.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = exerciseDB.json; path = "workout-routine/Utils/exerciseDB.json"; sourceTree = SOURCE_ROOT; };
+		B1E308E3291B260F0073CC02 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		B1EE6D18290B429400B7611B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		B1EE6D1A290B53A700B7611B /* RoutineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineService.swift; sourceTree = "<group>"; };
 		B1EE6D21290C93CE00B7611B /* TEBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEBaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +143,8 @@
 		B100354129044B5700AD19AA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B1EE6D18290B429400B7611B /* SetsModel.swift */,
+				B1EE6D18290B429400B7611B /* Workout.swift */,
+				B1E308E3291B260F0073CC02 /* Exercise.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				B19F391C290DE9EB00D03ECB /* Constants.swift */,
+				B1E308E1291B0A580073CC02 /* exerciseDB.json */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 				B177491F290455EE00A7CB3B /* RoutineViewController.xib in Resources */,
 				B19F3921290E03FE00D03ECB /* MenuViewController.xib in Resources */,
 				B1003535290448F800AD19AA /* Assets.xcassets in Resources */,
+				B1E308E2291B0A590073CC02 /* exerciseDB.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,9 +341,10 @@
 				B1CC2DFC291482AE00AA6D42 /* SearchPresenter.swift in Sources */,
 				B177491E290455EE00A7CB3B /* RoutineViewController.swift in Sources */,
 				B19F3920290E03FE00D03ECB /* MenuViewController.swift in Sources */,
+				B1E308E4291B260F0073CC02 /* Exercise.swift in Sources */,
 				B1EE6D1B290B53A700B7611B /* RoutineService.swift in Sources */,
 				B100352C290448F000AD19AA /* AppDelegate.swift in Sources */,
-				B1EE6D19290B429400B7611B /* SetsModel.swift in Sources */,
+				B1EE6D19290B429400B7611B /* Workout.swift in Sources */,
 				B1CC2E2E291860B800AA6D42 /* ExerciseDBService.swift in Sources */,
 				B100352E290448F000AD19AA /* SceneDelegate.swift in Sources */,
 				B1EE6D22290C93CE00B7611B /* TEBaseViewController.swift in Sources */,
