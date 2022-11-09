@@ -21,8 +21,6 @@ class MenuViewController: TEBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        ExerciseDBService().fetchData()
     }
     
     @IBAction func goToWorkoutButtonPressed(_ sender: UIButton) {

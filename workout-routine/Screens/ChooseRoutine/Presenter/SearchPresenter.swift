@@ -10,7 +10,7 @@ import UIKit
 
 protocol SearchPresenterProtocol {
     var exercises: [Exercise] {get set}
-    var filteredData: [String] {get set}
+    var filteredData: [Exercise] {get set}
     func updateExercisesList()
     func fetchTableViewLength() -> Int
     func searchStatus(index: Int) -> String
@@ -19,7 +19,7 @@ protocol SearchPresenterProtocol {
 
 class SearchPresenter: SearchPresenterProtocol {
     var exercises: [Exercise] = []
-    var filteredData: [String] = []
+    var filteredData: [Exercise] = []
     var searchController: UISearchController?
     var isSearchBarEmpty: Bool {
         return searchController?.searchBar.text?.isEmpty ?? true
@@ -29,24 +29,30 @@ class SearchPresenter: SearchPresenterProtocol {
     }
     
     func updateExercisesList() {
-        exercises.append(Exercise.init(name: ["Bicep Curl", "Tricep Dip", "Hammer Curl", "Overhead Tricep Extension"]))
+        let jsonData = readLocalJson(forName: "exerciseDB")
+        
+        if let data = jsonData {
+            if let exerciseData = parse(jsonData: data) {
+                self.exercises = exerciseData.exercises
+            }
+        }
     }
     
     func searchStatus(index: Int) -> String {
-        let exercise: String
+        let exercise: Exercise
         
         if isFiltering {
             exercise = filteredData[index]
         } else {
-            exercise = exercises[0].name![index]
+            exercise = exercises[index]
         }
         
-        return exercise
+        return exercise.name
     }
     
     func filterContentForSearchText(_ searchText: String, completion: () -> Void) {
-        filteredData = exercises[0].name!.filter { (exercise: String) -> Bool in
-            return exercise.lowercased().contains(searchText.lowercased())
+        filteredData = exercises.filter { (name: Exercise) -> Bool in
+            return name.name.lowercased().contains(searchText.lowercased())
         }
         completion()
     }
@@ -55,6 +61,29 @@ class SearchPresenter: SearchPresenterProtocol {
         if isFiltering {
             return filteredData.count
         }
-        return exercises[0].name?.count ?? 0
+        return exercises.count
+    }
+    
+    func readLocalJson(forName name: String) -> Data? {
+        do {
+            if let filePath = Bundle.main.path(forResource: name, ofType: "json") {
+                let fileURL = URL(fileURLWithPath: filePath)
+                let data = try Data(contentsOf: fileURL)
+                return data
+            }
+        } catch {
+            print("error: \(error)")
+        }
+        return nil
+    }
+    
+    func parse(jsonData: Data) -> ExerciseList? {
+        do {
+            let decodedData = try JSONDecoder().decode(ExerciseList.self, from: jsonData)
+            return decodedData
+        } catch {
+            print("error: \(error)")
+        }
+        return nil
     }
 }

@@ -8,11 +8,14 @@
 import Foundation
 import RealmSwift
 
-class Exercise: Object {
+class Workout: Object {
     
     var exercises = List<String?>()
     @Persisted var bodyPart: String?
     @Persisted var exerciseList: List<String?>
+    @Persisted var weight: Double?
+    @Persisted var sets: Int?
+    @Persisted var reps: Int?
     var name: [String]?
     var target: String?
      
